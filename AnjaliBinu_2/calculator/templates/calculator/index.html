@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator 🧮</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h2>BMI Calculator</h2>
@@ -21,14 +22,15 @@
             </div>
             <button type="submit">Calculate BMI</button>
         </form>
+
         {% if bmi %}
         <div class="result">
             <h3>Your BMI: {{ bmi }}</h3>
-            <p>Category: {{ category }}</p>
+            <p>Category: {{ status }}</p>
         </div>
-        {% elif category %}
+        {% elif status %}
         <div class="error-result">
-            <h3>{{ category }}</h3>
+            <h3>{{ status }}</h3>
         </div>
         {% endif %}
     </div>    

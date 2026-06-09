@@ -1,23 +1,26 @@
 from django.shortcuts import render
- 
+
 def bmi_calculator(request):
     bmi = None
-    category = ""
+    status = ""
+    
     if request.method == "POST":
-        try:
-            weight = float(request.POST.get("weight"))
-            height = float(request.POST.get("height"))
-            # BMI formula: weight (kg) / (height (m))^2
+        weight = float(request.POST.get('weight', 0))
+        height = float(request.POST.get('height', 0))
+        
+        if weight > 0 and height > 0:
+            if height > 3:
+                height = height / 100
+                
             bmi = round(weight / (height ** 2), 2)
-            # categorizing based on BMI value
+            
             if bmi < 18.5:
-                category = "Underweight"
+                status = "Underweight"
             elif 18.5 <= bmi < 24.9:
-                category = "Normal weight"
+                status = "Normal weight"
             elif 25 <= bmi < 29.9:
-                category = "Overweight"
+                status = "Overweight"
             else:
-                category = "Obesity"
-        except (ValueError, TypeError):
-            category = "Please enter valid numbers for weight and height"
-    return render(request, "template/index.html", {"bmi": bmi, "category": category})
+                status = "Obese"
+                
+    return render(request, 'calculator/index.html', {'bmi': bmi, 'status': status})
