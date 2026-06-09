@@ -1,85 +1,135 @@
+/* 1. Global reset - removed the disruptive flex properties from here */
 * {
-    background-color: #c2d78e;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
     font-family: Arial, sans-serif;
 }
 
-h2 {
+/* 2. Main Body: Centers the entire square box on the screen vertically & horizontally */
+body {
+    background-color: #411420;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;      
+    padding: 20px;
+}
+
+/* 3. The Main Box Container (Forces the square appearance) */
+div.container {
+    background-color: #7a4353;
+    width: 100%;
+    max-width: 500px;         
+    aspect-ratio: 1 / 1;     
+    padding: 30px;
+    border-radius: 12px;           
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    gap: 15px;               
+}
+
+/* 4. Headings & Text Elements */
+h1 {
     text-align: center;
-    margin-top: 20px;
-    background-color: #c72121;
-    color: #fff;
+    margin-bottom: 20px;
+    color: #e0e0e0;
 }
 
 h3 {
     text-align: center;
-    margin-top: 20px;
-    background-color: #c72121;
-    color: #fff;
+    background-color: #c895a6;
+    color: #020202;
 }
 
 p {
     text-align: center;
     font-size: 18px;
-    background-color: #c72121;
-    color: #fff;
+    background-color: #c895a6;
+    color: #000000;
+    margin: 5px 0;
 }
 
+/* 5. Form Card (Inputs container) */
 form {
-    background-color: #fff;
+    background: transparent;
+    background-color: #a56a7c;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: auto;
+    width: 100%;             
 }
 
 div.form-group {
     margin-bottom: 15px;
-    background-color: #5b2582;
-}
-
-div.result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #3a061c;
+    background-color: #c895a6;
+    padding: 5px;            
     border-radius: 5px;
-    text-align: center;
-}
-
-div.error-result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #56916a;
-    border-radius: 5px;
-    text-align: center;
-    color: #fff;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #030303;
+    background: transparent; 
 }
 
 input[type="number"] {
     width: 100%;
     padding: 8px;
-    box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #358f12;
+    border-radius: 12px;
+    background-color: #d9cad8;
+    color: #605c5c;             
 }
 
+input[type="number"]::placeholder {
+    color: rgba(96, 92, 92, 0.7);             
+}
+
+/* 6. Action Button */
 button {
     width: 100%;
     padding: 10px;
-    background-color: #57660a;
-    color: #fff;
+    background-color: #d9cad8;
+    color: #000000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #1d396a;
+    display: block;
+    filter: drop-shadow(0 0 10px
+    #d9cad8);
+}
+
+/* 7. Results Dark Block */
+div.result {
+    padding: 15px;
+    background-color: #a56a7c;
+    border-radius: 5px;
+    width: 100%;            
+}
+
+div.result p {
+    color: #080808;
+    text-align: center;
+    margin: 5px 0;
+}
+
+div.error-result {
+    padding: 15px;
+    background-color: #a56a7c;
+    border-radius: 5px;
+    text-align: center;
+    color: #080808;
+    width: 100%;
+}
+
+.overlay{
+    background-color: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(10px);
 }
