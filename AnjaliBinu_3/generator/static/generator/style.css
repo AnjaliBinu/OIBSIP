@@ -6,13 +6,14 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 700px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 70px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 8px;
+    font-size: 18px;
 }
 
 .password-box {
@@ -54,11 +55,11 @@ select {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #007BFF;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #0056b3;
 }
 
 form {
@@ -81,6 +82,7 @@ form {
     display: flex;
     align-items: center;
     margin: 6px 0;
+    font-size: 18px;
 }
 
 .checkbox-group input {

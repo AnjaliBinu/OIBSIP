@@ -64,7 +64,6 @@ form {
 
 div.form-group {
     margin-bottom: 15px;
-    background-color: #c895a6;
     padding: 5px;            
     border-radius: 5px;
 }
@@ -102,8 +101,7 @@ button {
 
 button:hover {
     display: block;
-    filter: drop-shadow(0 0 10px
-    #d9cad8);
+    filter: drop-shadow(0 0 10px #d9cad8);
 }
 
 /* 7. Results Dark Block */
@@ -116,6 +114,7 @@ div.result {
 
 div.result p {
     color: #080808;
+    background-color: #a56a7c;
     text-align: center;
     margin: 5px 0;
 }
@@ -127,9 +126,4 @@ div.error-result {
     text-align: center;
     color: #080808;
     width: 100%;
-}
-
-.overlay{
-    background-color: rgba(30, 30, 30, 0.2);
-    backdrop-filter: blur(10px);
 }
