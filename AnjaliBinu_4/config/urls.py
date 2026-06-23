@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from weather.views import forecast
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', forecast, name='forecast'), # Leave the quotes empty '' for the homepage
 ]
