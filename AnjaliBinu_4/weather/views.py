@@ -1,5 +1,9 @@
+import os  
 import requests 
 from django.shortcuts import render
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def forecast(request):
     city = request.GET.get('city', 'London') # Defaults to London if empty    

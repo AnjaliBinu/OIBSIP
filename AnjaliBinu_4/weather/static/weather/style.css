@@ -1,54 +1,88 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif; 
-    background-color: #f4f7f6; 
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    background-color: #f8fafc; /* Very soft, clean off-white background */
 }
+
 h1 {
-    font-size: 24px; 
+    font-size: 40px; 
     text-align: center;
+    color: #0f172a; /* Deep charcoal black for crisp contrast */
+    margin-top: 80px; 
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
+
 .container {
-    padding: 20px;
-    margin: 40px auto; 
+    padding: 25px;
+    margin: 20px auto 60px auto; 
     max-width: 500px; 
-    background-color: #1e3a8a; 
-    border-radius: 8px; 
+    background-color: #ddd9d9; /* Pure white container card */
+    border-radius: 12px; /* Slightly smoother corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Very subtle, elegant soft gray shadow */
+    border: 1px solid #e2e8f0; /* Crisp light gray border line */
 }
+
 form {
-    padding: 20px;
-    background-color: white;
-    border-radius: 6px;
+    padding: 10px 0; /* Removed extra inner background wrapping to keep it seamless white */
+    background-color: transparent;
 }
+
 .form-group {
     padding: 10px 0; 
     display: flex;
     flex-direction: column; 
 }
-.form-group input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569; /* Slate gray for readable labels */
+    text-transform: uppercase; /* Minimalist styling */
+    letter-spacing: 0.5px;
 }
-button {
+
+.form-group input {
     padding: 12px;
-    margin: 15px 0;
-    background-color: blueviolet;
-    color: white;
+    margin-top: 8px;
+    border: 1px solid #cbd5e1; /* Medium light gray border */
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: #bbc8d4; /* Shifts to slight off-white on active typing */
+}
+
+button {
+    padding: 14px;
+    margin: 25px 0 10px 0;
+    background-color: #3e516e; /* Sleek slate-black button */
+    color: #ffffff; /* Pure white text */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%; 
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
 }
+
 button:hover {
-    background-color: #6a1b9a; 
+    background-color: #2f3846; /* Smooth transition to a lighter slate gray on hover */
 }
+
 .display-data {
     padding: 20px;
-    margin-top: 20px;
-    background-color: white;
+    margin-top: 25px;
+    background-color: #f1f5f9; /* Soft light gray card block for data display */
     border-radius: 6px;
-    color: #333;
+    color: #0f172a;
+    border-left: 4px solid #94a3b8; /* Classic medium gray accent bar */
 }
